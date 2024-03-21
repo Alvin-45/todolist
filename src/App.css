@@ -2,6 +2,9 @@
  width: 300px;
  text-align: center;
 }
+.b2{
+  width: 50%;
+}
 *{
   font-family: "Solway", serif;
   font-weight: 300;
@@ -20,5 +23,7 @@
       padding: 0px;
       margin: 0px;
     }
-    
+    .b2{
+      width: 100%;
+    }
 }

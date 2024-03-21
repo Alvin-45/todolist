@@ -35,7 +35,7 @@ function Todo() {
   return (
     <>
     <div className="fullbody container">
-        <div className='shadow w-50 p-5'>
+        <div className='shadow b2 p-5'>
             <h1 className='text-center'>My Todo List</h1>
             <div className="d-flex w-100 justify-content-center mt-5">
                 <input type="text" value={input} className='rounded t1' onChange={e => setInput(e.target.value)} placeholder='Add Todo'/>
