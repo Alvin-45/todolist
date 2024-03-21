@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form';
 import { useDispatch, useSelector } from 'react-redux';
-import { add, deletetodo, toggle } from '../redux/todoslices';
+import { add, deletetodo, status } from '../redux/todoslices';
 
 
 function Todo() {
@@ -25,8 +25,8 @@ function Todo() {
     dispatch(deletetodo(id));
   };
 
-  const handleToggleTodo = id => {
-    dispatch(toggle(id));
+  const handleStatusTodo = id => {
+    dispatch(status(id));
   };
   const totalTasks = todos.length  
 //   console.log(totalTasks);
@@ -49,9 +49,9 @@ function Todo() {
              <div key={`default-${type}`} className="mb-3 d-flex fw-bolder">
                <Form.Check // prettier-ignore
                  type={type}
-                 id={`{todoitems.id}`}
+                 id={todoitems.id}
                  checked={todoitems.completed}
-                 onChange={()=>handleToggleTodo(todoitems.id)}
+                 onChange={()=>handleStatusTodo(todoitems.id)}
                /> 
                <span className='ms-3' style={{textDecoration:todoitems.completed?'line-through':'none',}}>{todoitems.input}</span>
              </div>

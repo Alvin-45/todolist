@@ -15,7 +15,7 @@ const todoslices = createSlice({
       localStorage.setItem('todos', JSON.stringify(newState));
       return newState;
     },
-    toggle: (state, action) => {
+    status: (state, action) => {
       const todo = state.find(todo => todo.id === action.payload);
       if (todo) {
         todo.completed = !todo.completed;
@@ -25,5 +25,5 @@ const todoslices = createSlice({
   }
 });
 
-export const { add, deletetodo, toggle } = todoslices.actions;
+export const { add, deletetodo, status } = todoslices.actions;
 export default todoslices.reducer;
