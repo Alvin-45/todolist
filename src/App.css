@@ -1,0 +1,17 @@
+.t1{
+ width: 300px;
+ text-align: center;
+}
+*{
+  font-family: "Solway", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.fullbody{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
